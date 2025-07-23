@@ -4,16 +4,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.logoSection {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+.logoBalise {
+  height: 30px;
+  margin-right: 10px;
+}
+.logoName {
+  color: white;
+  font-size: 1rem;
 }
 .menuNavBar {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 .buttonGarment {
-  background-color: transparent;
-  color: aliceblue;
+  background: none;
   border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
 }

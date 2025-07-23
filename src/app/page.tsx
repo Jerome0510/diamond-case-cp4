@@ -2,9 +2,9 @@ import styles from "./page.module.css";
 
 const Home = () => {
   return (
-    <>
-      <h2>Ca commence ICI</h2>
-    </>
+    <section className={styles.homeBody}>
+      <h1>titre</h1>
+    </section>
   );
 };
 

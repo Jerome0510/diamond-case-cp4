@@ -1,0 +1,23 @@
+.illustrationList {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 125px;
+  gap: 30px;
+}
+
+.firstPicture {
+  height: 850px;
+  width: 500px;
+  object-fit: cover;
+}
+.secondpicture {
+  height: 850px;
+  width: 500px;
+  object-fit: cover;
+  margin-top: 100px;
+}
+.thirdPicture {
+  height: 850px;
+  width: 500px;
+  object-fit: cover;
+}

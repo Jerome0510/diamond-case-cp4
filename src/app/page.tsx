@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
 
 const Home = () => {
-  return <></>;
+  return <section className={styles.homeBody}></section>;
 };
 
 export default Home;

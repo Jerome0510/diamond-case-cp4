@@ -1,3 +1,4 @@
+import { appRoutes } from "@/data/ROUTES";
 import styles from "./Header.module.css";
 import Link from "next/link";
 
@@ -14,12 +15,12 @@ const Header = () => {
       </div>
       <ul className={styles.menuNavBar}>
         <li className={styles.navBarList}>
-          <Link className={styles.buttonGarment} href="/api/categories/1">
+          <Link className={styles.buttonGarment} href={appRoutes.ARTICLES(1)}>
             NOS POLOS
           </Link>
         </li>
         <li className={styles.navBarList}>
-          <Link className={styles.buttonGarment} href="/api/categories/2">
+          <Link className={styles.buttonGarment} href="src/app/shop">
             NOS MONTRES
           </Link>
         </li>

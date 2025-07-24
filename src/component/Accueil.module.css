@@ -1,23 +1,45 @@
 .illustrationList {
   display: flex;
   justify-content: space-evenly;
-  margin: 125px;
-  gap: 30px;
+  margin: 100px;
+  gap: 20px;
 }
 
 .firstPicture {
-  height: 850px;
+  height: 750px;
   width: 500px;
   object-fit: cover;
 }
-.secondpicture {
-  height: 850px;
+.secondPicture {
+  height: 750px;
   width: 500px;
   object-fit: cover;
-  margin-top: 100px;
+  margin-top: 20px;
 }
 .thirdPicture {
-  height: 850px;
+  height: 750px;
   width: 500px;
   object-fit: cover;
+}
+
+@media screen and (max-width: 800px) {
+  .thirdPicture {
+    height: 750px;
+    width: 170px;
+    object-fit: cover;
+  }
+  .firstPicture {
+    display: none;
+  }
+  .secondPicture {
+    height: 750px;
+    width: 170px;
+    object-fit: cover;
+  }
+  .illustrationList {
+    display: flex;
+    justify-content: center;
+    margin: 80px;
+    gap: 10px;
+  }
 }

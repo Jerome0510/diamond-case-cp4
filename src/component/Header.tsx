@@ -6,11 +6,13 @@ const Header = () => {
   return (
     <header className={styles.globalHeader}>
       <div className={styles.logoSection}>
-        <img
-          className={styles.logoBalise}
-          src="/logo/baliseHtmlBlanche.PNG"
-          alt="LOGO"
-        />
+        <Link href="/">
+          <img
+            className={styles.logoBalise}
+            src="/logo/baliseHtmlBlanche.PNG"
+            alt="LOGO"
+          />
+        </Link>
         <h2 className={styles.logoName}>DIAMOND CASE</h2>
       </div>
       <ul className={styles.menuNavBar}>

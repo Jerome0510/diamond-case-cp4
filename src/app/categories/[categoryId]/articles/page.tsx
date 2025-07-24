@@ -1,5 +1,5 @@
 import { apiRoutes } from "@/data/ROUTES";
-import styles from "./Shop.module.css";
+import styles from "./articles.module.css";
 import { ArticleModel } from "@/model/ArticleModel";
 
 type Props = {
@@ -16,12 +16,16 @@ const Articles = async ({ params }: Props) => {
 
   console.log(allArticles);
   return (
-    <section>
-      <ul>
+    <section className={styles.globalBoutique}>
+      <ul className={styles.boutiqueList}>
         {allArticles.map((article) => (
-          <li key={article.id}>
-            <h2>{article.name}</h2>
-            <img src={article.image} alt={article.name} />
+          <li className={styles.cardArticle} key={article.id}>
+            <h2 className={styles.nameArticle}>{article.name}</h2>
+            <img
+              className={styles.pictureArticle}
+              src={article.image}
+              alt={article.name}
+            />
           </li>
         ))}
       </ul>

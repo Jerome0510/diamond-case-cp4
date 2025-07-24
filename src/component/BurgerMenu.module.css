@@ -53,3 +53,8 @@
 .menuOpen li {
   margin-top: 50px;
 }
+@media screen and (min-width: 800px) {
+  .menuThatOpens {
+    display: none;
+  }
+}

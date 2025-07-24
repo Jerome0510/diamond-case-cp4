@@ -1,4 +1,5 @@
 import styles from "./Header.module.css";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -13,10 +14,14 @@ const Header = () => {
       </div>
       <ul className={styles.menuNavBar}>
         <li className={styles.navBarList}>
-          <button className={styles.buttonGarment}>NOS POLOS</button>
+          <Link className={styles.buttonGarment} href="/api/categories/1">
+            NOS POLOS
+          </Link>
         </li>
         <li className={styles.navBarList}>
-          <button className={styles.buttonGarment}>NOS MONTRES</button>
+          <Link className={styles.buttonGarment} href="/api/categories/2">
+            NOS MONTRES
+          </Link>
         </li>
       </ul>
     </header>

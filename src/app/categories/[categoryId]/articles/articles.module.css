@@ -1,0 +1,37 @@
+.globalBoutique {
+  min-height: 100vh;
+  background-image: url(/images/boutiqueBack.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-y: auto;
+}
+
+.boutiqueList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 250px;
+  gap: 150px;
+}
+
+.cardArticle img {
+  height: 400px;
+  width: 400px;
+  border-radius: 10px;
+  object-fit: scale;
+  border: solid 8px;
+  border-color: rgb(110, 110, 110);
+}
+
+@media screen and (max-width: 800px) {
+  .cardArticle img {
+    height: 200px;
+    width: 200px;
+  }
+  .boutiqueList {
+    margin: 100px;
+    gap: 50px;
+  }
+}

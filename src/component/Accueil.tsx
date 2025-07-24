@@ -13,7 +13,7 @@ const Accueil = () => {
         </li>
         <li>
           <img
-            className={styles.secondpicture}
+            className={styles.secondPicture}
             src="/images/pictureTree.jpg"
             alt="picture tree"
           />

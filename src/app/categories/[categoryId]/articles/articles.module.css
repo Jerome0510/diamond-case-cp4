@@ -20,7 +20,7 @@
   height: 400px;
   width: 400px;
   border-radius: 10px;
-  object-fit: scale;
+  object-fit: cover;
   border: solid 8px;
   border-color: rgb(110, 110, 110);
 }

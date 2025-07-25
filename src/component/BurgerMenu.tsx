@@ -24,7 +24,7 @@ const BurgerMenu = () => {
             <Link href={appRoutes.ARTICLES(1)}>NOS POLOS</Link>
           </li>
           <li>
-            <Link href="">NOS MONTRES</Link>
+            <Link href={appRoutes.ARTICLES(2)}>NOS MONTRES</Link>
           </li>
         </ul>
       </nav>

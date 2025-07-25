@@ -1,0 +1,16 @@
+.articleDetail {
+  min-height: 100vh;
+  background-image: url(/images/boutiqueBack.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-y: auto;
+}
+.imageDetail {
+  height: 800px;
+  width: 900px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: solid 8px;
+  border-color: rgb(110, 110, 110);
+}

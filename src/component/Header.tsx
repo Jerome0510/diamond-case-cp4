@@ -22,7 +22,7 @@ const Header = () => {
           </Link>
         </li>
         <li className={styles.navBarList}>
-          <Link className={styles.buttonGarment} href="src/app/shop">
+          <Link className={styles.buttonGarment} href={appRoutes.ARTICLES(2)}>
             NOS MONTRES
           </Link>
         </li>

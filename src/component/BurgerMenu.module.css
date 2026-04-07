@@ -1,0 +1,60 @@
+.menuThatOpens {
+  position: fixed;
+  top: 60px;
+  right: 50px;
+  z-index: 1;
+  padding: 15px;
+}
+
+.menuBurger {
+  font-size: 2rem;
+  color: rgb(8, 8, 8);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+.menuBurger.open {
+  transform: rotate(90deg);
+  z-index: 2;
+}
+.navBar {
+  position: absolute;
+  left: 1rem;
+  border-radius: 10px;
+  padding: 15px;
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+  z-index: 1;
+  width: 90vw;
+}
+.navBar.open {
+  background-color: rgb(165, 164, 164);
+  top: 20px;
+  margin-left: -160px;
+  opacity: 1;
+  visibility: visible;
+  width: 200px;
+  height: 300px;
+  z-index: 1;
+}
+.menuOpen {
+  list-style: none;
+  font-weight: bold;
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.menuOpen li {
+  margin-top: 50px;
+}
+@media screen and (min-width: 800px) {
+  .menuThatOpens {
+    display: none;
+  }
+}

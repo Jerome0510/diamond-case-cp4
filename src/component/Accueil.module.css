@@ -1,0 +1,45 @@
+.illustrationList {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 100px;
+  gap: 20px;
+}
+
+.firstPicture {
+  height: 450px;
+  width: 250px;
+  object-fit: cover;
+}
+.secondPicture {
+  height: 450px;
+  width: 250px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+.thirdPicture {
+  height: 450px;
+  width: 250px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 800px) {
+  .thirdPicture {
+    height: 400px;
+    width: 170px;
+    object-fit: cover;
+  }
+  .firstPicture {
+    display: none;
+  }
+  .secondPicture {
+    height: 400px;
+    width: 170px;
+    object-fit: cover;
+  }
+  .illustrationList {
+    display: flex;
+    justify-content: center;
+    margin: 80px;
+    gap: 10px;
+  }
+}

@@ -1,2 +1,21 @@
+.homeBody {
+  position: fixed;
+  background-image: url(/backgrounds/backAccueil.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+}
 
-
+@media screen and (max-width: 800px) {
+  .homeBody {
+    position: fixed;
+    background-image: url(/backgrounds/backPhone.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+  }
+}

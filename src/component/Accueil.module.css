@@ -1,24 +1,24 @@
 .illustrationList {
   display: flex;
   justify-content: space-evenly;
-  margin: 100px;
-  gap: 20px;
+  margin: 8vw;
+  gap: 2vw;
 }
 
 .firstPicture {
-  height: 450px;
-  width: 250px;
+  height: 35vw;
+  width: 20vw;
   object-fit: cover;
 }
 .secondPicture {
-  height: 450px;
-  width: 250px;
+  height: 35vw;
+  width: 20vw;
   object-fit: cover;
-  margin-top: 20px;
+  margin-top: 2vw;
 }
 .thirdPicture {
-  height: 450px;
-  width: 250px;
+  height: 35vw;
+  width: 20vw;
   object-fit: cover;
 }
 

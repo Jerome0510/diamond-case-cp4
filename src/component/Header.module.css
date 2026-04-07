@@ -15,7 +15,7 @@
   align-items: center;
 }
 .logoBalise {
-  height: 30px;
+  height: auto;
   margin-right: 10px;
 }
 .logoName {

@@ -12,23 +12,23 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 250px;
-  gap: 150px;
+  margin: 150px;
+  gap: 50px;
 }
 
 .cardArticle img {
-  height: 400px;
-  width: 400px;
-  border-radius: 10px;
+  height: 200px;
+  width: 135px;
+  border-radius: 3px;
   object-fit: cover;
-  border: solid 8px;
+  border: solid 3px;
   border-color: rgb(110, 110, 110);
 }
 
 @media screen and (max-width: 800px) {
   .cardArticle img {
     height: 200px;
-    width: 200px;
+    width: 135px;
   }
   .boutiqueList {
     margin: 100px;

@@ -6,25 +6,25 @@
 }
 
 .firstPicture {
-  height: 750px;
-  width: 500px;
+  height: 450px;
+  width: 250px;
   object-fit: cover;
 }
 .secondPicture {
-  height: 750px;
-  width: 500px;
+  height: 450px;
+  width: 250px;
   object-fit: cover;
   margin-top: 20px;
 }
 .thirdPicture {
-  height: 750px;
-  width: 500px;
+  height: 450px;
+  width: 250px;
   object-fit: cover;
 }
 
 @media screen and (max-width: 800px) {
   .thirdPicture {
-    height: 750px;
+    height: 400px;
     width: 170px;
     object-fit: cover;
   }
@@ -32,7 +32,7 @@
     display: none;
   }
   .secondPicture {
-    height: 750px;
+    height: 400px;
     width: 170px;
     object-fit: cover;
   }

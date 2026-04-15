@@ -41,3 +41,13 @@
 - **Pourquoi :** À l'instar des Route Handlers, les pages dans Next.js 15 reçoivent désormais l'objet `params` sous forme de `Promise`. Le typage précédent provoquait une erreur TypeScript lors de l'utilisation de `await params`. De plus, les paramètres de route sont nativement des chaînes de caractères (`string`).
 - **Comment :** Passage du type de `params` en `Promise` et typage des identifiants en `string`. Ajout d'une conversion explicite via `Number()` lors de l'appel aux helpers de routes qui attendent des nombres.
 - **Objectif :** Harmoniser le typage avec les standards de Next.js 15 et corriger les erreurs de compilation.
+
+## [15/04/2026] - Correction de l'importation CSS globale
+
+**Fichier créé :**
+- `src/types/css.d.ts` : Fichier de déclaration de module pour les fichiers CSS.
+
+**Modifications :**
+- **Pourquoi :** L'importation de `globals.css` dans `src/app/layout.tsx` était "cassée" (probablement une erreur TypeScript indiquant que le module CSS ne pouvait pas être trouvé ou n'avait pas de déclarations de type). Bien que Next.js gère généralement cela, une déclaration explicite peut résoudre les problèmes de résolution de type.
+- **Comment :** Création d'un fichier de déclaration `css.d.ts` dans le dossier `src/types` pour informer TypeScript que les fichiers `.css` sont des modules valides.
+- **Objectif :** Résoudre l'erreur de compilation TypeScript liée à l'importation de fichiers CSS globaux, permettant ainsi à `globals.css` d'être importé et appliqué correctement.

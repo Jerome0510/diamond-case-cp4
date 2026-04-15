@@ -3,16 +3,16 @@ import styles from "./ArticleDetail.module.css";
 import { ArticleModel } from "@/model/ArticleModel";
 
 type Props = {
-  params: {
-    categoryId: number;
-    articleId: number;
-  };
+  params: Promise<{
+    categoryId: string;
+    articleId: string;
+  }>;
 };
 
 const ArticleDetail = async ({ params }: Props) => {
-  const { categoryId, articleId } = params;
+  const { categoryId, articleId } = await params;
 
-  const res = await fetch(apiRoutes.ARTICLE(categoryId, articleId));
+  const res = await fetch(apiRoutes.ARTICLE(Number(categoryId), Number(articleId)));
   if (!res.ok) {
     return (
       <div className={styles.error}>

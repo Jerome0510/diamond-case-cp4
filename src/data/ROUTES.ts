@@ -7,6 +7,7 @@ const apiRoutes = {
     `${apiUrl}/api/categories/${categoryId}/articles/`,
   ARTICLE: (categoryId: number, articleId: number) =>
     `${apiUrl}/api/categories/${categoryId}/articles/${articleId}`,
+  BASKET: `${apiUrl}/api/basket`,
 };
 
 const appRoutes = {
@@ -14,6 +15,7 @@ const appRoutes = {
     `${appUrl}/categories/${categoryId}/articles`,
   ARTICLE: (categoryId: number, articleId: number) =>
     `${apiUrl}/categories/${categoryId}/articles/${articleId}`,
+  BASKET: `${appUrl}/basket`,
 };
 
 export { apiRoutes, appRoutes };

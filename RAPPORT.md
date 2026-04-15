@@ -21,3 +21,23 @@
 - **Pourquoi :** Les dimensions des images étaient fixées en pixels, ce qui empêchait une adaptation fluide sur les différents formats d'écrans desktop.
 - **Comment :** Remplacement des unités fixes (`px`) par des unités relatives au viewport (`vw`) pour les marges, les espacements (`gap`) et les dimensions des images.
 - **Objectif :** Assurer que la mise en page des illustrations s'adapte dynamiquement à la largeur de l'écran sur desktop, offrant une expérience visuelle plus moderne et flexible.
+
+## [15/04/2026] - Correction du typage asynchrone des paramètres de route
+
+**Fichier modifié :**
+- `src/app/api/categories/[categoryId]/articles/[articleId]/route.ts`
+
+**Modifications :**
+- **Pourquoi :** Depuis Next.js 15, l'objet `params` est une `Promise`. Le type TypeScript précédemment utilisé était synchrone, ce qui est incompatible avec l'usage de `await params` dans le corps de la fonction et génère des erreurs de type.
+- **Comment :** Mise à jour de l'interface `Params` pour déclarer `params` comme une `Promise`.
+- **Objectif :** Mettre le code en conformité avec les exigences de Next.js 15 et assurer une validation correcte par le compilateur TypeScript.
+
+## [15/04/2026] - Correction du typage asynchrone des paramètres dans la page ArticleDetail
+
+**Fichier modifié :**
+- `src/app/categories/[categoryId]/articles/[articleId]/page.tsx`
+
+**Modifications :**
+- **Pourquoi :** À l'instar des Route Handlers, les pages dans Next.js 15 reçoivent désormais l'objet `params` sous forme de `Promise`. Le typage précédent provoquait une erreur TypeScript lors de l'utilisation de `await params`. De plus, les paramètres de route sont nativement des chaînes de caractères (`string`).
+- **Comment :** Passage du type de `params` en `Promise` et typage des identifiants en `string`. Ajout d'une conversion explicite via `Number()` lors de l'appel aux helpers de routes qui attendent des nombres.
+- **Objectif :** Harmoniser le typage avec les standards de Next.js 15 et corriger les erreurs de compilation.

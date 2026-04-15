@@ -3,11 +3,15 @@ import { ArticleModel } from "@/model/ArticleModel";
 import { NextResponse } from "next/server";
 
 type Params = {
-  params: { categoryId: string; articleId: string };
+  params: Promise<{ categoryId: string; articleId: string }>;
 };
 
-export async function GET(_req: Request, { params }: Params) {
+export async function GET(
+  _req: Request, 
+  { params }: Params) {
+  
   const { categoryId, articleId } = await params;
+  
   try {
     const result = await db.query(
       "SELECT * FROM articles WHERE id = ? AND categories_id = ?",
